@@ -1,0 +1,21 @@
+language: c
+
+sudo: required
+
+services:
+- docker
+
+
+notifications:
+  slack:
+    on_success: change
+    on_failure: always
+
+install: true    
+
+script:
+    - ./pipeline.sh install
+    
+after_success:
+   - ./pipeline.sh after_success   
+     
