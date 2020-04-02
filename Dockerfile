@@ -1,7 +1,7 @@
 FROM debian:stretch
 
 RUN apt update -y
-RUN apt install git make gcc g++ -y
+RUN apt install git make gcc g++ python -y
 
 ENV LIBSFX_PATH /opt/libSFX
 
