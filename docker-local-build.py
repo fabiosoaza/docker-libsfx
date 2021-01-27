@@ -4,11 +4,11 @@
 from optparse import OptionParser
 import os
 
-from configparser import SafeConfigParser
+from configparser import ConfigParser
 
 
 def get_build_property(key):
-    config = SafeConfigParser()
+    config = ConfigParser()
     config.read('build.properties')
     return config.get('build', key)
 
